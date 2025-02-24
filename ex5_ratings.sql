@@ -1,0 +1,7 @@
+CREATE TABLE BookRatings (
+    UserID INT,
+    ISBN VARCHAR(255),
+    BookRating INT,
+    CONSTRAINT PK_BookRatings PRIMARY KEY (UserID, ISBN),
+    CONSTRAINT FK_BookRatings_Books FOREIGN KEY (ISBN) REFERENCES Books(ISBN)
+);
